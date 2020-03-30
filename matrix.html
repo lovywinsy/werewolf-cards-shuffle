@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let players = new Array("二师兄", "段肥猫", "郭孜然", "大鲤鱼", "JZ", "五月", "谈小歪", "沙师兄", "李阳", "小熊猫", "施嘉祺", "咖啡鱼");
+            shuffle(players)
+            // 重置
+            $("div.blank_diamond").eq(0).click(function () {
+                $("div.diamond").each(function (i, object) {
+                    let seq;
+                    if (i <= 4) {
+                        seq = ++i;
+                    } else if (i == 5) {
+                        seq = 12;
+                    } else {
+                        seq = 18 - i;
+                    }
+                    object.innerHTML = "<img src=assets/默认.jpg><div class=top-left>" + seq + " - " + players[i] + "</div>";
+                })
+            })
+
+            // 发牌
+            $("div.blank_diamond").eq(1).click(function () {
+                let roles = new Array("预言家", "女巫", "猎人", "白痴", "狼人", "狼人", "狼人", "狼人", "村民", "村民", "村民", "村民");
+                shuffle(roles)
+                $("div.diamond").each(function (i, object) {
+                    let seq;
+                    if (i <= 4) {
+                        seq = ++i;
+                    } else if (i == 5) {
+                        seq = 12;
+                    } else {
+                        seq = 18 - i;
+                    }
+                    object.innerHTML = "<img src=assets/" + roles[i] + ".jpg><div class=top-left>" + seq + " - " + players[i] + "</div>";
+                })
+            })
+
+
+        });
+    </script>
+    <title>Matrix</title>
+</head>
+<body>
+<div id="container">
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="blank_diamond">重置</div>
+    <div class="blank_diamond">发牌</div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+    <div class="diamond"><img src="assets/默认.jpg"></div>
+</div>
+<button id="LY" onclick=""></button>
+</body>
+</html>

@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: darkgray;
+}
+
+#container {
+    width: 1500px;
+    height: auto;
+    margin: 100px auto;
+}
+
+#container > div {
+    float: left;
+}
+
+.diamond {
+    width: 300px;
+    height: 300px;
+    background: burlywood;
+    text-align: center;
+    /*border-color: black;*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*box-sizing: border-box;*/
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+    position: relative;
+}
+
+.diamond:hover {
+    background-color: lightcoral;
+}
+
+.diamond img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.top-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.blank_diamond {
+    width: 450px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    font-size: 50px;
+
+    /*border-color: black;*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*box-sizing: border-box;*/
+    color: darkgray;
+    background: whitesmoke;
+}
+
+.blank_diamond:hover {
+    background-color: cornflowerblue;
+}
